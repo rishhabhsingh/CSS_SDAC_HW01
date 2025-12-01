@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Practice</title>
+    <style>
+        
+    body {
+    font-family: Arial;
+    padding: 20px;
+    background: #eee;
+    
+}
+
+.demo {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 40px;
+    background: white;
+}
+
+.box {
+    height: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    @media (max-width: 600px) {
+        #maxWidthBox {
+            background-color: #4caf50;
+        }
+    }
+
+    @media (min-width: 600px) {
+        #minWidthBox {
+            background-color: #012d52;
+            color: pink;
+        }
+    }
+
+    @media (max-height: 400px) {
+        #maxHeightBox {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("https://imgs.search.brave.com/-_fgce7PClcsO7iZDs3GxsLg3q7icpcGFLHssjxviXo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzRhL2Ni/LzgzLzRhY2I4M2Vm/YWFiOTcyYTdiYjI1/ZWM2MmEzMzM3NTNm/LmpwZw");
+        }
+    }
+
+    @media (orientation: landscape) {
+       .landscape {
+            display: block;
+        }
+
+        .portrait {
+            display: none;
+        }
+    }
+
+    @media (orientation: portrait) {
+       .landscape {
+            display: none;
+        }
+
+        .portrait {
+            display: block;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        video[src="night.mp4"] {
+            display: block;
+        }
+
+        video[src="morning.mp4"] {
+            display: none;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        video[src="night.mp4"] {
+            display: none;
+        }
+
+        video[src="morning.mp4"] {
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h2>1. max-width: 600px</h2>
+    <div class="demo">
+        <div class="box" id="maxWidthBox"></div>
+    </div>
+
+    <h2>2. min-width: 600px</h2>
+    <div class="demo">
+        <div class="box" id="minWidthBox">
+            <h1>this turns green if the width is more than 600</h1>
+        </div>
+    </div>
+
+     <h2>6. Oreintation</h2>
+    <div class="demo">
+            <video  style="height: 150px; width: auto;"  class="portrait" src="portrait.mp4" autoplay loop muted></video>
+            <video style="height: 150px; width: auto;" class="landscape" src="landscape.mp4" autoplay loop muted></video>
+    </div>
+
+    <h2>7. Prefer Color Scheme</h2>
+    <div class="demo">
+        <video style="height: 150px;" src="morning.mp4"></video>
+        <video style="height: 150px;" src="night.mp4">T</video>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Practice Project</title>
+    
+    <!-- External CSS for question 4 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Internal CSS for questions 2, 3, 7, 8, 9, 10, 11, 12, 13 -->
+    <style>
+        /* Question 2: Internal CSS for h1, p, and button */
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .paragraph-one {
+            color: #34495e;
+            font-size: 1.2rem;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .paragraph-two {
+            color: #7d3c98;
+            font-size: 1.1rem;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            background-color: #f4ecf7;
+            padding: 15px;
+            border-left: 4px solid #7d3c98;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Question 3: CSS rule for h3 elements */
+        h3 {
+            font-size: 30px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        /* Question 7: Uniform styling for headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+        }
+        
+        p {
+            font-family: 'Georgia', serif;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        
+        /* Question 8: Universal font size and line height */
+        * {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        /* Question 9: Div with background color */
+        .bg-color-div {
+            background-color: #9b59b6;
+            color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        /* Question 10: Background image section */
+        .bg-image-section {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23f1c40f"/><circle cx="100" cy="100" r="80" fill="%23e74c3c"/><polygon points="100,30 120,80 180,80 130,110 150,160 100,130 50,160 70,110 20,80 80,80" fill="%232c3e50"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Question 11: Text styling properties */
+        .styled-heading {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: #c0392b;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .styled-paragraph {
+            font-family: 'Verdana', sans-serif;
+            font-size: 1.1rem;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #16a085;
+            line-height: 1.6;
+            background-color: #e8f8f5;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        /* Question 12: Box Model */
+        .box-model {
+            width: 350px;
+            height: 200px;
+            border: 8px solid #3498db;
+            padding: 25px;
+            margin: 40px auto;
+            outline: 5px dashed #e74c3c;
+            background-color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+        
+        /* Question 13: Positioning properties */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: gray;
+            color: black;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .relative-section {
+            position: relative;
+            height: 250px;
+            background-color: #ecf0f1;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 120px;
+            height: 120px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .sticky-section {
+            position: sticky;
+            top: 80px;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        
+        footer {
+            position: static;
+            background-color:gray;
+            color: black;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        /* Additional styling for layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header for question 13 -->
+    <header>
+        <h1>CSS Practice Project</h1>
+        <p>Demonstrating Various CSS Concepts</p>
+    </header>
+    
+    <div class="container" style="margin-top: 140px;">
+        <!-- Question 1: Multiple divs with inline CSS -->
+        <div class="section">
+            <h2 class="question-title">1. Divs with Inline CSS</h2>
+            <div style="background-color: #e74c3c; color: white; padding: 15px; margin: 10px 0; border-radius: 5px;">
+                This div has a red background with white text, padding, and margin.
+            </div>
+            <div style="background-color: #3498db; color: white; padding: 15px; margin: 10px 0; border-radius: 5px;">
+                This div has a blue background with white text, padding, and margin.
+            </div>
+            <div style="background-color: #2ecc71; color: white; padding: 15px; margin: 10px 0; border-radius: 5px;">
+                This div has a green background with white text, padding, and margin.
+            </div>
+        </div>
+        
+        <!-- Question 2: Elements styled with internal CSS -->
+        <div class="section">
+            <h2 class="question-title">2. Elements Styled with Internal CSS</h2>
+            <h1>This heading uses internal CSS</h1>
+            <p class="paragraph-one">This is the first paragraph with distinct styling - different color, font family, and background.</p>
+            <p class="paragraph-two">This is the second paragraph with completely different styling - monospace font, purple color, and left border.</p>
+            <button>Styled Button with Hover Effect</button>
+        </div>
+        
+        <!-- Question 3: h3 with custom styling -->
+        <div class="section">
+            <h2 class="question-title">3. H3 Elements with Custom Styling</h2>
+            <h3>This h3 has 30px font size, red color, and bold weight</h3>
+            <h3>Another h3 with the same styling applied via CSS rule</h3>
+        </div>
+        
+        <!-- Question 4: Elements styled with external CSS -->
+        <div class="section">
+            <h2 class="question-title">4. Elements Styled with External CSS</h2>
+            <h1 class="external-h1">This heading uses external CSS</h1>
+            <p class="external-p">This paragraph uses external CSS styling.</p>
+            <ul class="external-ul">
+                <li>List item 1 with external styling</li>
+                <li>List item 2 with external styling</li>
+                <li>List item 3 with external styling</li>
+            </ul>
+        </div>
+        
+        <!-- Question 5: Class selector styling -->
+        <div class="section">
+            <h2 class="question-title">5. Class Selector Styling</h2>
+            <div class="highlight-box">Styled div with 'highlight-box' class</div>
+            <p class="highlight-text">Styled paragraph with 'highlight-text' class</p>
+            <span class="highlight-text">Styled span with 'highlight-text' class</span>
+            <div class="special-box">Styled div with 'special-box' class</div>
+        </div>
+        
+        <!-- Question 6: ID selector styling -->
+        <div class="section">
+            <h2 class="question-title">6. ID Selector Styling</h2>
+            <h1>Special Heading</h1>
+            <p>This is a paragraph with important content.</p>
+            <button id="unique-button">Unique Button with ID Selector</button>
+            <div class="explanation">
+                <h3>IDs vs Classes Explanation:</h3>
+                <p><strong>IDs</strong> are unique identifiers - each ID can only be used once per page. They have higher specificity in CSS.</p>
+                <p><strong>Classes</strong> can be reused multiple times on a page. They're ideal for styling multiple elements with the same appearance.</p>
+                <p>In this example, the button uses an ID selector (#unique-button) which ensures only this specific button gets these styles.</p>
+            </div>
+        </div>
+        
+        <!-- Question 7: Uniform styling for headings -->
+        <div class="section">
+            <h2 class="question-title">7. Uniform Styling for Headings</h2>
+            <h1>Main Heading (H1)</h1>
+            <p>This paragraph has different styling from the headings.</p>
+            <h2>Secondary Heading (H2)</h2>
+            <p>Another paragraph with the paragraph-specific styling.</p>
+            <h3>Tertiary Heading (H3)</h3>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+            </ul>
+        </div>
+        
+        <!-- Question 8: Universal font size and line height -->
+        <div class="section">
+            <h2 class="question-title">8. Universal Font Size and Line Height</h2>
+            <p>All text on this page uses the universal font size (16px) and line height (1.5) defined in CSS.</p>
+            <div>This div also uses the universal font settings.</div>
+            <h4>This heading is affected by the universal selector</h4>
+            <button>A button with universal font settings</button>
+        </div>
+        
+        <!-- Question 9: Div with background color -->
+        <div class="section">
+            <h2 class="question-title">9. Div with Background Color</h2>
+            <div class="bg-color-div">This div has a purple background color applied via internal CSS.</div>
+        </div>
+        
+        <!-- Question 10: Background image with properties -->
+        <div class="section">
+            <h2 class="question-title">10. Background Image with Properties</h2>
+            <section class="bg-image-section">
+                This section has a background image with no-repeat and center positioning.
+            </section>
+        </div>
+        
+        <!-- Question 11: Text styling properties -->
+        <div class="section">
+            <h2 class="question-title">11. Text Styling Properties</h2>
+            <h1 class="styled-heading">Styled Heading with Various Properties</h1>
+            <p class="styled-paragraph">this paragraph demonstrates various text styling properties including font family, size, style, weight, decoration, and transformation. notice how each property affects the appearance of the text differently.</p>
+        </div>
+        
+        <!-- Question 12: Box Model -->
+        <div class="section">
+            <h2 class="question-title">12. Box Model Demonstration</h2>
+            <div class="box-model">
+                This is a box demonstrating the CSS box model with margin, padding, border, and outline.
+            </div>
+            <div style="text-align: center;">
+                <p><strong>Box Model Components:</strong></p>
+                <p>Width: 350px | Height: 200px | Border: 8px | Padding: 25px | Margin: 40px | Outline: 5px</p>
+            </div>
+        </div>
+        
+        <!-- Question 13: Positioning -->
+        <div class="section">
+            <h2 class="question-title">13. CSS Positioning</h2>
+            
+            <!-- Relative and Absolute Positioning -->
+            <div class="relative-section">
+                <h3>Relative Positioning Section</h3>
+                <p>This section has relative positioning. The inner box is positioned absolutely within this container.</p>
+                <div class="absolute-box">Absolute Box</div>
+            </div>
+            
+            <!-- Sticky Positioning -->
+            <div class="sticky-section">
+                <h3>Sticky Positioning Section</h3>
+                <p>This section has sticky positioning. It will stick when scrolling down the page.</p>
+            </div>
+            
+            <!-- Content to demonstrate scrolling -->
+            <div style="height: 800px; padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+                <h3>Scrollable Content Area</h3>
+                <p>Scroll down to see the sticky section in action and notice how the header remains fixed at the top.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with static positioning -->
+    <footer>
+        <p>This footer uses static positioning (default).</p>
+        <p>CSS Practice Project - Demonstrating Various CSS Concepts</p>
+    </footer>
+    
+    <!-- Internal CSS for remaining questions -->
+    <style>
+        /* Question 5: Class selector styling */
+        .highlight-box {
+            background-color: #f39c12;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        
+        .highlight-text {
+            background-color: #d5dbdb;
+            color: #2c3e50;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1.1rem;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .special-box {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        /* Question 6: ID selector styling and explanation */
+        #unique-button {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-style: italic;
+            display: block;
+            margin: 15px 0;
+        }
+        
+        .explanation {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</body>
+</html>
