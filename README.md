@@ -3,4 +3,4 @@
 ## How to Use
 Clone the repository:
 ```bash
-git clone https://github.com/rishhabhsingh/CSS_SDAC_CW01.git
+git clone https://github.com/rishhabhsingh/CSS_SDAC_HW01.git
